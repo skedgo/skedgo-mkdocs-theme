@@ -10,6 +10,8 @@
   },
   "scripts": {
     "tailwind:watch": "tailwindcss -i ./src/css/main.css -o ./css/main.css --watch",
-    "tailwind:build": "tailwindcss -i ./src/css/main.css -o ./css/main.css --minify"
+    "tailwind:build": "tailwindcss -i ./src/css/main.css -o ./css/main.css --minify",
+    "build": "npm run tailwind:build",
+    "dev": "npm run tailwind:watch"
   }
 }
