@@ -110,7 +110,7 @@
     {%- block styles %}
       <link
         rel="stylesheet"
-        href="{{ ('css/main.css?v=' ~ config.extra.theme_version) | url }}"
+        href="{{ ('css/main.css?v=' ~ config.theme.theme_version) | url }}"
       />
       {%- if config.theme.highlightjs %}
         <link
