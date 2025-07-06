@@ -108,7 +108,10 @@
     {%- endblock %}
 
     {%- block styles %}
-      <link rel="stylesheet" href="{{ 'css/main.css'|url }}" />
+      <link
+        rel="stylesheet"
+        href="{{ 'css/main.css?v={{ config.extra.theme_version }}'|url }}"
+      />
       {%- if config.theme.highlightjs %}
         <link
           rel="stylesheet"

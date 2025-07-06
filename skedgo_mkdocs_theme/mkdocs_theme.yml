@@ -13,3 +13,6 @@ hljs_style_dark: github-dark
 analytics:
   gtag: null
   anonymize_ip: false
+
+extra:
+  theme_version: 20250706
