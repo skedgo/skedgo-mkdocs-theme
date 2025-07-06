@@ -1,14 +1,17 @@
 <div class="relative hidden w-[280px] shrink-0 md:block" role="complementary">
   <div
-    class="sticky top-32 rounded-2xl border-1 border-gray-200 px-4 py-3"
+    class="sticky top-32 rounded-2xl border-1 border-gray-200 py-3"
     role="complementary"
     id="sidebar"
   >
-    <ul id="toc" class="flex flex-col gap-3 leading-5">
+    <ul id="toc" class="flex flex-col gap-2">
       {%- for toc_item in page.toc %}
-        <li
-          class="border-b-2 border-gray-100 pb-2 text-lg leading-6 font-semibold"
-        >
+        {% if not loop.first %}
+          <div class="px-4 py-2">
+            <div class="h-0.25 bg-gray-200"></div>
+          </div>
+        {% endif %}
+        <li class="mb-1 px-4 text-lg leading-5 font-semibold">
           <a
             href="{{ toc_item.url }}"
             class="{% if toc_item.active %}active{% endif %}"
@@ -19,7 +22,7 @@
           <li>
             <a
               href="{{ toc_item.url }}"
-              class="{% if toc_item.active %}active{% endif %} transition-color text-gray-500 hover:text-gray-900"
+              class="{% if toc_item.active %}active{% endif %} transition-color -ml-px block border-l border-transparent pl-4 text-sm text-gray-500 hover:border-gray-400 hover:text-gray-900"
               >{{ toc_item.title }}</a
             >
           </li>
