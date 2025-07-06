@@ -1,9 +1,11 @@
-{% if page.meta.source %}
-<div class="source-links">
-{% for filename in page.meta.source %}
-    <span class="label label-primary">{{ filename }}</span>
-{% endfor %}
+<div class="flex flex-col gap-10 md:px-10 md:py-10" role="main">
+  {% if page.meta.source %}
+    <div class="source-links">
+      {% for filename in page.meta.source %}
+        <span class="label label-primary">{{ filename }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+  <div class="content">{{ page.content }}</div>
+  {% include "navbar-bottom.html" %}
 </div>
-{% endif %}
-
-{{ page.content }}

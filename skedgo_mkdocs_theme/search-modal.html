@@ -1,9 +1,48 @@
-<div class="search-form" id="mkdocs_search_modal" tabindex="-1" raria-labelledby="Search Modal" aria-hidden="true">
-    <form role="form" class="container">
-        <div class="search-icon"></div>
-        <input type="text" class="search-field" placeholder="Type keyword..." id="mkdocs-search-query">
+<div
+  class="pointer-events-none fixed top-0 left-0 z-20 flex h-screen w-full items-start justify-center p-4 opacity-0 transition-all duration-300 md:p-8"
+  id="mkdocs_search_modal"
+  tabindex="-1"
+  raria-labelledby="Search Modal"
+  aria-hidden="true"
+>
+  <button onclick="toggleSearch()">
+    <div class="absolute top-0 left-0 h-full w-full bg-gray-900/30"></div>
+  </button>
+  <div
+    class="z-20 flex w-full max-w-[600px] flex-col gap-0 rounded-2xl bg-white p-2 shadow-2xl"
+  >
+    <form role="form" class="flex items-center px-1">
+      <div class="text-gray-400">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-search-icon lucide-search"
+        >
+          <path d="m21 21-4.34-4.34" />
+          <circle cx="11" cy="11" r="8" />
+        </svg>
+      </div>
+      <input
+        type="text"
+        class="grow rounded-lg p-2 focus-visible:outline-none"
+        placeholder="Type keyword..."
+        id="mkdocs-search-query"
+      />
+      <button
+        type="reset"
+        onclick="toggleSearch()"
+        class="rounded border border-gray-200 px-1.5 py-1 text-xs leading-3 text-gray-500"
+      >
+        esc
+      </button>
     </form>
-    <div class="results-list">
-    	<div id="mkdocs-search-results" class="container"></div>
-    </div>
+    <div id="mkdocs-search-results" class="overflow-auto"></div>
+  </div>
 </div>

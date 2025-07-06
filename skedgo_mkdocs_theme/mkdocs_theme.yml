@@ -1,4 +1,4 @@
-# Config options for 'mkdocs' theme
+# Config options for 'skedgo' theme
 
 locale: en
 
@@ -8,6 +8,7 @@ search_index_only: false
 highlightjs: true
 hljs_languages: []
 hljs_style: github
+hljs_style_dark: github-dark
 
 analytics:
   gtag: null

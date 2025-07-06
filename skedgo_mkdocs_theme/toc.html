@@ -1,11 +1,30 @@
-<div class="sidebar hidden-print affix" role="complementary" id="sidebar">
-	<div class="indicator"></div>
-    <ul class="nav sidenav">
-    {%- for toc_item in page.toc %}
-        <li class="main "><a href="{{ toc_item.url }}" class="{% if toc_item.active %}active{% endif %}">{{ toc_item.title }}</a></li>
+<div class="relative hidden w-[280px] shrink-0 md:block" role="complementary">
+  <div
+    class="sticky top-32 rounded-2xl border-1 border-gray-200 px-4 py-3"
+    role="complementary"
+    id="sidebar"
+  >
+    <ul id="toc" class="flex flex-col gap-3 leading-5">
+      {%- for toc_item in page.toc %}
+        <li
+          class="border-b-2 border-gray-100 pb-2 text-lg leading-6 font-semibold"
+        >
+          <a
+            href="{{ toc_item.url }}"
+            class="{% if toc_item.active %}active{% endif %}"
+            >{{ toc_item.title }}</a
+          >
+        </li>
         {%- for toc_item in toc_item.children %}
-            <li><a href="{{ toc_item.url }}" class="{% if toc_item.active %}active{% endif %}">{{ toc_item.title }}</a></li>
+          <li>
+            <a
+              href="{{ toc_item.url }}"
+              class="{% if toc_item.active %}active{% endif %} transition-color text-gray-500 hover:text-gray-900"
+              >{{ toc_item.title }}</a
+            >
+          </li>
         {%- endfor %}
-    {%- endfor %}
+      {%- endfor %}
     </ul>
+  </div>
 </div>
