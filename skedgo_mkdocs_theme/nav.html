@@ -2,10 +2,10 @@
   id="site-header"
   class="bg-sg-blue fixed top-0 z-10 flex w-full flex-col"
 >
-  <div class="flex h-14 w-full items-center px-1">
+  <div class="flex w-full items-center px-1">
     <button
       onclick="toggleMenu()"
-      class="flex shrink-0 p-2 text-white lg:hidden"
+      class="flex shrink-0 p-2 text-white md:hidden"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@
     </button>
     {%- block homelink %}
       <a
-        class="flex grow flex-wrap items-center gap-3 p-3 hover:opacity-80 lg:flex-initial"
+        class="mr-auto flex flex-wrap items-center gap-3 p-3 hover:opacity-80"
         href="{{ nav.homepage.url|url }}"
       >
         <img
@@ -42,17 +42,17 @@
       </a>
     {%- endblock %}
 
-    <div class="hidden items-center gap-3 p-2 lg:flex">
+    <div class="hidden items-center gap-3 p-2 md:flex">
       <div class="h-5 w-[2px] rounded bg-white/20"></div>
     </div>
 
     <div
       id="menu"
-      class="space-between hidden flex-auto items-center p-2 text-sm lg:flex"
+      class="space-between hidden flex-auto items-center p-2 text-sm md:flex"
     >
       {% if nav|length>1 %}
         <ul
-          class="flex flex-col flex-wrap gap-2 md:flex-1 md:flex-row lg:items-center"
+          class="flex flex-col flex-wrap gap-2 md:flex-1 md:flex-row md:items-center"
         >
           {% for nav_item in nav %}{% if nav_item.children %}
             <li class="group relative">
@@ -83,10 +83,10 @@
               >
                 {% for nav_item in nav_item.children %}
                   <li
-                    class="{% if nav_item.active %}lg:bg-blue-100{% endif %} flex rounded-lg"
+                    class="{% if nav_item.active %}md:bg-blue-100{% endif %} flex rounded-lg"
                   >
                     <a
-                      class="block px-3 py-2 text-sm font-semibold text-white/50 hover:text-white/70 lg:text-gray-700 lg:hover:text-gray-600"
+                      class="block px-3 py-2 text-sm font-semibold text-white/50 hover:text-white/70 md:text-gray-700 md:hover:text-gray-600"
                       href="{{ nav_item.url|url }}"
                       >{{ nav_item.title }}</a
                     >
@@ -146,7 +146,7 @@
   </div>
   <div
     id="menu-mobile"
-    class="max-h-0 -translate-y-4 overflow-scroll px-1 opacity-0 transition-all duration-300 lg:hidden"
+    class="max-h-0 -translate-y-4 overflow-scroll px-1 opacity-0 transition-all duration-300 md:hidden"
   >
     {% if nav|length>1 %}
       <ul class="py-3">

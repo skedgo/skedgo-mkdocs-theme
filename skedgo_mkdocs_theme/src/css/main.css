@@ -105,6 +105,10 @@
   @apply list-decimal pl-6;
 }
 
+.content li {
+  @apply mb-2;
+}
+
 .content blockquote {
   @apply border-l-4 border-gray-200 pl-4;
 }
