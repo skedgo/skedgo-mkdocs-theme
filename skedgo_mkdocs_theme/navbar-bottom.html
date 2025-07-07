@@ -1,9 +1,9 @@
-<div
-  class="grid grid-cols-2 rounded-xl border border-gray-200 p-2"
-  role="navigation"
->
-  {%- block next_prev %}
-    {%- if page and (page.next_page or page.previous_page) %}
+{%- block next_prev %}
+  {%- if page and (page.next_page or page.previous_page) %}
+    <div
+      class="grid grid-cols-2 rounded-xl border border-gray-200 p-2"
+      role="navigation"
+    >
       <div class="{% if not page.previous_page %}hidden{% endif %}">
         <a
           rel="prev"
@@ -55,6 +55,6 @@
           </div>
         </a>
       </div>
-    {%- endif %}
-  {%- endblock %}
-</div>
+    </div>
+  {%- endif %}
+{%- endblock %}

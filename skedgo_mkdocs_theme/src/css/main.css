@@ -90,14 +90,10 @@
 }
 
 .content pre code {
-  @apply text-xs leading-5 whitespace-pre-wrap;
+  @apply block rounded-lg border border-gray-900/10 text-xs leading-5 whitespace-pre-wrap;
 }
 
-.content pre {
-  @apply overflow-hidden rounded-lg inset-ring-1 inset-ring-gray-900/20;
-}
-
-.content * + * {
+.content > * + * {
   @apply mt-4;
 }
 
@@ -137,6 +133,14 @@
 
 .content img {
   @apply rounded-lg;
+}
+
+.content pre {
+  @apply relative;
+}
+
+.content pre .copy-button {
+  @apply absolute top-0 right-0 bg-white px-1 text-xs;
 }
 
 #mkdocs-search-results > p {
