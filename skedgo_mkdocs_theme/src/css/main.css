@@ -121,10 +121,10 @@
   @apply mt-10 block border-gray-300;
 }
 
-.content li code,
+/* .content li code,
 .content p code {
   @apply rounded bg-blue-50 px-1 py-0.5 text-blue-600;
-}
+} */
 
 .content h1:hover > .headerlink,
 .content h2:hover > .headerlink,
@@ -145,6 +145,11 @@
 
 .content pre .copy-button {
   @apply absolute top-0 right-0 bg-white px-1 text-xs;
+}
+
+.content p > code,
+.content li > code {
+  @apply rounded bg-gray-100 px-1 py-0.5 text-blue-600;
 }
 
 #mkdocs-search-results > p {
