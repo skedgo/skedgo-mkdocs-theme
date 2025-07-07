@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-10 md:px-10 md:py-10" role="main">
+<div class="max-w-full py-6 lg:py-10" role="main">
   {% if page.meta.source %}
     <div class="source-links">
       {% for filename in page.meta.source %}
@@ -6,6 +6,6 @@
       {% endfor %}
     </div>
   {% endif %}
-  <div class="content">{{ page.content }}</div>
+  <div class="content mb-20">{{ page.content }}</div>
   {% include "navbar-bottom.html" %}
 </div>
