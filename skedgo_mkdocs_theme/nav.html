@@ -5,7 +5,7 @@
   <div class="flex w-full items-center px-1">
     <button
       onclick="toggleMenu()"
-      class="flex shrink-0 p-2 text-white md:hidden"
+      class="flex shrink-0 p-2 text-white lg:hidden"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,18 +42,16 @@
       </a>
     {%- endblock %}
 
-    <div class="hidden items-center gap-3 p-2 md:flex">
+    <div class="flex items-center gap-3 p-2">
       <div class="h-5 w-[2px] rounded bg-white/20"></div>
     </div>
 
     <div
       id="menu"
-      class="space-between hidden flex-auto items-center p-2 text-sm md:flex"
+      class="space-between hidden flex-auto items-center p-2 text-sm lg:flex"
     >
       {% if nav|length>1 %}
-        <ul
-          class="flex flex-col flex-wrap gap-2 md:flex-1 md:flex-row md:items-center"
-        >
+        <ul class="flex flex-1 flex-row flex-wrap items-center gap-2">
           {% for nav_item in nav %}{% if nav_item.children %}
             <li class="group relative">
               <a
@@ -67,7 +65,7 @@
               >
                 {% for nav_item in nav_item.children %}
                   <li
-                    class="{% if nav_item.active %}md:bg-blue-100{% endif %} flex rounded-lg"
+                    class="{% if nav_item.active %}bg-blue-100{% endif %} flex rounded-lg"
                   >
                     <a
                       class="flex w-full gap-2 rounded-lg px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-blue-50"
@@ -93,7 +91,7 @@
           {% endif %}{% endfor %}
         </ul>
       {% endif %}
-      <ul class="flex shrink-0 flex-col gap-2 md:flex-row md:items-center">
+      <ul class="flex flex-1 flex-row flex-wrap items-center justify-end gap-2">
         <li class="group relative">
           <a
             href="#"
@@ -197,7 +195,7 @@
   </div>
   <div
     id="menu-mobile"
-    class="max-h-0 -translate-y-4 overflow-scroll px-1 opacity-0 transition-all duration-300 md:hidden"
+    class="max-h-0 -translate-y-4 overflow-scroll px-1 opacity-0 transition-all duration-300 lg:hidden"
   >
     {% if nav|length>1 %}
       <ul class="py-3">
