@@ -7,11 +7,10 @@ search_index_only: false
 
 highlightjs: true
 hljs_languages: []
-hljs_style: github
-hljs_style_dark: github-dark
+hljs_style: atom-one-dark
 
 analytics:
   gtag: null
   anonymize_ip: false
 
-theme_version: "0.3.8"
+theme_version: "0.3.9"
