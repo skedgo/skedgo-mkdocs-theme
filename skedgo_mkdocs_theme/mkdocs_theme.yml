@@ -13,4 +13,4 @@ analytics:
   gtag: null
   anonymize_ip: false
 
-theme_version: "0.4.0"
+theme_version: "0.4.1"
